@@ -7,7 +7,6 @@ import static org.junit.Assert.*;
 
 public class BalancedBracketsTest {
 
-    //TODO: add tests here
     @Test
     public void emptyTest() {
         assertEquals(true, true);
@@ -38,19 +37,26 @@ public class BalancedBracketsTest {
         assertFalse(BalancedBrackets.hasBalancedBrackets("()"));
     }
 
+    // I differed from the instructions here with the empty string
     @Test
     public void emptyStringReturnsFalse() {
         assertFalse(BalancedBrackets.hasBalancedBrackets(""));
     }
 
+    // instructions were a little unclear on this too - whether you can nest brackets or not
+//    @Test
+//    public void repeatedBracketWhenMatchedReturnsFalse() {
+//        assertFalse(BalancedBrackets.hasBalancedBrackets("[[]]"));
+//    }
+
     @Test
-    public void repeatedBracketWhenMatchedReturnsFalse() {
-        assertFalse(BalancedBrackets.hasBalancedBrackets("[[]]"));
+    public void matchedNestedBracketsReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[[a string[]]]"));
     }
 
     @Test
     public void equalBracketsInWrongOrderReturnsFalse() {
-        assertFalse(BalancedBrackets.hasBalancedBrackets("] ["));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("[[]]] ["));
     }
 
     @Test

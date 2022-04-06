@@ -3,6 +3,12 @@ package main;
 public class BonusBinarySearch {
 
     /**
+     * my notes
+     *
+     * renamed argument from sortedNumbers to numbersToSort
+     */
+
+    /**
      * A binary search implementation for integer arrays.
      *
      * Info about binary search: https://www.geeksforgeeks.org/binary-search/

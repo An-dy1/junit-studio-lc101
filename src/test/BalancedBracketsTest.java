@@ -7,10 +7,15 @@ import static org.junit.Assert.*;
 
 public class BalancedBracketsTest {
 
-    @Test
-    public void emptyTest() {
-        assertEquals(true, true);
-    }
+    // single pair of matched brackets returns true
+    // only left bracket returns false
+    // only right bracket returns false
+    // matched brackets mixed with other characters returns true
+    // several separate matched brackets returns true
+    // matched parentheses only returns false
+    // * empty string returns false
+    // matched nested brackets returns true
+    // unmatched nested brackets returns false
 
     @Test
     public void onlyBracketsReturnsTrue() {
@@ -20,6 +25,11 @@ public class BalancedBracketsTest {
     @Test
     public void onlyLeftBracketReturnsFalse() {
         assertFalse(BalancedBrackets.hasBalancedBrackets("Launch["));
+    }
+
+    @Test
+    public void onlyRightBracketReturnsFalse() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("A st]ring"));
     }
 
     @Test
@@ -56,23 +66,11 @@ public class BalancedBracketsTest {
 
     @Test
     public void equalBracketsInWrongOrderReturnsFalse() {
-        assertFalse(BalancedBrackets.hasBalancedBrackets("[[]]] ["));
-    }
-
-    @Test
-    public void onlyRightBracketReturnsFalse() {
-        assertFalse(BalancedBrackets.hasBalancedBrackets("A st]ring"));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("[[ ] [ ]] "));
     }
 
 
-//    @Test(expected = IllegalArgumentException.class)
-//    public void balancedBracketsDoesNotAcceptInt() {
-//        BalancedBrackets.hasBalancedBrackets();
-//    }
 
-    // onlyBrackets throws exception if passed an integer
-    // onlyBrackets throws exception if passed a double
-    // throws exception if passed an array of strings
     // accepts string parameters (does not throw illegal argument exception)
     // a string with un-matched brackets returns false
     // a string with matched brackets and other characters returns true

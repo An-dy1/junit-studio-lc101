@@ -3,12 +3,6 @@ package main;
 public class BonusBinarySearch {
 
     /**
-     * my notes
-     *
-     * renamed argument from sortedNumbers to numbersToSort
-     */
-
-    /**
      * A binary search implementation for integer arrays.
      *
      * Info about binary search: https://www.geeksforgeeks.org/binary-search/
@@ -18,16 +12,16 @@ public class BonusBinarySearch {
      * @return index of search item if it's found, -1 if not found
      */
     public static int binarySearch(int[] sortedNumbers, int n) {
-        int right = sortedNumbers.length - 1;
-        int left = 0;
-        while (right >= left) {
-            int mid = left + ((right - left) / 2);
-            if (sortedNumbers[mid] > n) {
-                right = mid;
-            } else if (sortedNumbers[mid] < n) {
-                left = mid;
+        int rightBoundary = sortedNumbers.length - 1;
+        int leftBoundary = 0;
+        while (rightBoundary >= leftBoundary) {
+            int midPoint = leftBoundary + ((rightBoundary - leftBoundary) / 2);
+            if (sortedNumbers[midPoint] > n) {
+                rightBoundary = midPoint;
+            } else if (sortedNumbers[midPoint] < n) {
+                leftBoundary = midPoint;
             } else {
-                return mid;
+                return midPoint;
             }
         }
         return -1;

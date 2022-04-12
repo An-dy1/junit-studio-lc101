@@ -16,6 +16,7 @@ public class BalancedBracketsTest {
     // * empty string returns false
     // matched nested brackets returns true
     // unmatched nested brackets returns false
+    // * must have at least one set of brackets
 
     @Test
     public void onlyBracketsReturnsTrue() {
@@ -53,12 +54,6 @@ public class BalancedBracketsTest {
         assertFalse(BalancedBrackets.hasBalancedBrackets(""));
     }
 
-    // instructions were a little unclear on this too - whether you can nest brackets or not
-//    @Test
-//    public void repeatedBracketWhenMatchedReturnsFalse() {
-//        assertFalse(BalancedBrackets.hasBalancedBrackets("[[]]"));
-//    }
-
     @Test
     public void matchedNestedBracketsReturnsTrue() {
         assertTrue(BalancedBrackets.hasBalancedBrackets("[[a string[]]]"));
@@ -66,7 +61,7 @@ public class BalancedBracketsTest {
 
     @Test
     public void equalBracketsInWrongOrderReturnsFalse() {
-        assertFalse(BalancedBrackets.hasBalancedBrackets("[[ ] [ ]] "));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("[[  ]] ] ["));
     }
 
 

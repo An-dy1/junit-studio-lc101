@@ -21,68 +21,64 @@ public class BalancedBrackets {
      * @param str - to be validated
      * @return true if balanced, false otherwise
      */
-//    public static boolean hasBalancedBrackets(String str) {
-//        int left_brackets = 0;
-//        int right_brackets = 0;
-//
-//        for (char ch : str.toCharArray()) {
-//            // if there's a left bracket, count it
-//            if (ch == '[') {
-//                left_brackets++;
-//            // if there is a right bracket
-//            } else if (ch == ']') {
-//                // and there are more left brackets than right brackets currently counted, count it
-//                if(left_brackets - right_brackets > 0) {
-//                    right_brackets++;
-//                // (if there are equal brackets or fewer left than right, this means a right bracket is out of order
-//                } else {
-//                    return false;
-//                }
-//            }
-//        }
-//        // left and right brackets are equal, and there is at least one of the left brackets
-//        return left_brackets == right_brackets && left_brackets > 0;
-//    }
-
-
-    // SOLUTION CODE
     public static boolean hasBalancedBrackets(String str) {
-        int brackets = 0;
-        int counter = 0;
+        int left_brackets = 0;
+        int right_brackets = 0;
+
         for (char ch : str.toCharArray()) {
-            // if there have been 0 brackets, equal brackets, or at least one left bracket
-            if (brackets >= 0) {
-                // and there is a left bracket, count it
-                if (ch == '[') {
-                    brackets++;
-                    counter++;
-                // or if there is a right bracket, count it (by removing from total count of brackets)
-                } else if (ch == ']') {
-                    brackets --;
+            // if there's a left bracket, count it
+            if (ch == '[') {
+                left_brackets++;
+            // otherwise, if there is a right bracket
+            } else if (ch == ']') {
+                // and there are more left brackets than right brackets currently counted, count it
+                if(left_brackets - right_brackets > 0) {
+                    right_brackets++;
+                // if there are equal brackets or fewer left than right, this means a right bracket is out of order and we can return false right away
+                } else {
+                    return false;
                 }
-            // otherwise, there is a right bracket without a mate, so return false right away
-            } else {
-                return false;
-            }
+            } // if the character is anything other than a left or right bracket, ignore it and continue with the next character
         }
-        return brackets == 0 && counter > 0;
+        // left and right brackets are equal, and there is at least one of the left brackets
+        return left_brackets == right_brackets && left_brackets > 0;
     }
 
-    // A SIMILAR DRAFT TO MINE
+
+    // SOLUTION CODE plus counter for at least one bracket being present - all my tests pass
 //    public static boolean hasBalancedBrackets(String str) {
-//        int left_brackets = 0;
-//        int right_brackets = 0;
-//
+//        int brackets = 0;
+//        int counter = 0;
 //        for (char ch : str.toCharArray()) {
-//            // if there's a left bracket, count it
-//            if (ch == '[') {
-//                left_brackets++;
-//                // if there is a right bracket, and there are more left brackets than right brackets currently counted, count it (if there are even counted brackets, this means that a right bracket is out of order)
-//            } else if (ch == ']' && left_brackets - right_brackets > 0) {
-//                right_brackets++;
+//            // if there have been 0 brackets, equal brackets, or at least one left bracket
+//            if (brackets >= 0) {
+//                // and there is a left bracket, count it
+//                if (ch == '[') {
+//                    brackets++;
+//                    counter++;
+//                // or if there is a right bracket, count it (by removing from total count of brackets)
+//                } else if (ch == ']') {
+//                    brackets --;
+//                }
+//            // otherwise, there is a right bracket without a mate, so return false right away
+//            } else {
+//                return false;
 //            }
 //        }
-//        // left and right brackets are equal, and there is at least one of the left brackets
-//        return left_brackets == right_brackets && left_brackets > 0;
+//        return brackets == 0 && counter > 0;
 //    }
+
+    // function we start with
+//    public static boolean hasBalancedBrackets(String str) {
+//        int brackets = 0;
+//        for (char ch : str.toCharArray()) {
+//            if (ch == '[') {
+//                brackets++;
+//            } else if (ch == ']') {
+//                brackets--;
+//            }
+//        }
+//        return brackets == 0;
+//    }
+
 }

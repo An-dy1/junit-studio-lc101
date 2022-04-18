@@ -12,10 +12,18 @@ public class BonusBinarySearch {
      * @return index of search item if it's found, -1 if not found
      */
     public static int binarySearch(int[] sortedNumbers, int n) {
+
+//        if(isSorted(sortedNumbers)) {
+//            // do the code
+//        } else {
+//            // throw invalid argument exception
+//        }
+
         int rightBoundary = sortedNumbers.length - 1;
         int leftBoundary = 0;
         while (rightBoundary >= leftBoundary) {
             int midPoint = leftBoundary + ((rightBoundary - leftBoundary) / 2);
+            System.out.println("midpoint: " + midPoint);
             if (sortedNumbers[midPoint] > n) {
                 rightBoundary = midPoint;
             } else if (sortedNumbers[midPoint] < n) {

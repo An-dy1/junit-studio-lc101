@@ -52,7 +52,7 @@ public class BinarySearchTest {
 
   @Test
   public void findsFirstIndexOfNumberPresentTwiceInSortedListInMiddle() {
-    // show behavior
+    // show behavior with various lengths of lists
     int numberToFind = 5;
     int actualIndex = BonusBinarySearch.binarySearch(sortedArrayWithDuplicatesShort, numberToFind);
 
@@ -82,6 +82,8 @@ public class BinarySearchTest {
 
   @Test
   public void doesNotFindNumberInEmpty() {
+    // maybe an improvement to throw an exception?
+
     int numberToFind = 4;
     int actualIndex = BonusBinarySearch.binarySearch(emptyArray, numberToFind);
 

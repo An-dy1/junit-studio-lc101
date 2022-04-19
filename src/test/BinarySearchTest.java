@@ -73,8 +73,8 @@ public class BinarySearchTest {
   // generates an infinite loop - demonstrate with break points
   @Test
   public void doesNotFindNumberInNonSortedArray() {
-//    int numberToFind = 13;
-    int numberToFind = 4;
+    int numberToFind = 13;
+//    int numberToFind = 4;
     int actualIndex = BonusBinarySearch.binarySearch(nonSortedArray, numberToFind);
 
     assertEquals(8, actualIndex);

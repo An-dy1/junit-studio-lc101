@@ -40,7 +40,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="JUnit.BinarySearchTest.doesNotFindNumberInEmpty">
+  <component name="RunManager" selected="JUnit.BinarySearchTest.findsFirstIndexOfNumberPresentTwiceInSortedListInMiddle">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -69,23 +69,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BalancedBracketsTest.equalBracketsInWrongOrderReturnsFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="junit-studio-lc101" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.BalancedBracketsTest" />
-      <option name="METHOD_NAME" value="equalBracketsInWrongOrderReturnsFalse" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BinarySearchTest.doesNotFindNumberInEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit-studio-lc101" />
       <extension name="coverage">
@@ -97,6 +80,23 @@
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.BinarySearchTest" />
       <option name="METHOD_NAME" value="doesNotFindNumberInEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinarySearchTest.doesNotFindNumberInNonSortedArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit-studio-lc101" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.BinarySearchTest" />
+      <option name="METHOD_NAME" value="doesNotFindNumberInNonSortedArray" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -164,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BinarySearchTest.findsFirstIndexOfNumberPresentTwiceInSortedListInMiddle" />
+        <item itemvalue="JUnit.BinarySearchTest.doesNotFindNumberInNonSortedArray" />
+        <item itemvalue="JUnit.BalancedBracketsTest" />
         <item itemvalue="JUnit.BinarySearchTest.doesNotFindNumberInEmpty" />
         <item itemvalue="JUnit.BinarySearchTest.findsIndexOfNumberPresentTwiceNotInMiddle" />
-        <item itemvalue="JUnit.BinarySearchTest.findsFirstIndexOfNumberPresentTwiceInSortedListInMiddle" />
-        <item itemvalue="JUnit.BalancedBracketsTest.equalBracketsInWrongOrderReturnsFalse" />
-        <item itemvalue="JUnit.BalancedBracketsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +183,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572212264650</updated>
-      <workItem from="1650307438628" duration="1049000" />
+      <workItem from="1650307438628" duration="4638000" />
     </task>
     <servers />
   </component>
